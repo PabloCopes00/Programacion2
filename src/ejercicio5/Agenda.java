@@ -19,16 +19,16 @@ public class Agenda {
 
 	public void addReunion(Reunion e) {
 
-		if (!this.arrReunion.contains(e)) {
-			for (int i = 0; i < arrReunion.size(); i++) {
-				if (!this.arrReunion.get(i).hayconflictodefechaYHora(e)) {
-					this.arrReunion.add(e);
-				}
-				else {
-					System.out.println("No se pudo agregar la Reunion poruqe hay conflicto de horario");
-				}
-			}
-		}
+//		if (!this.arrReunion.contains(e)) {
+//			for (int i = 0; i < arrReunion.size(); i++) {
+//				if (!this.arrReunion.get(i).hayconflictodefechaYHora(e)) {
+//					this.arrReunion.add(e);
+//				}
+//				else {
+//					System.out.println("No se pudo agregar la Reunion poruqe hay conflicto de horario");
+//				}
+//			}
+//		}
 	}
 
 }

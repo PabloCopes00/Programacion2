@@ -2,7 +2,6 @@ package ejercicio5;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 
 public class MainAgenda {
 
@@ -18,6 +17,12 @@ public class MainAgenda {
 				LocalTime.of(20, 30));
 
 		Agenda agendaPablo = new Agenda();
+		reunion.addPersona(pablo);
+		reunion.addPersona(pepe);
+		reunion.addPersona(susana);
+		reunion.addPersona(juan);
+		agendaPablo.addReunion(reunion);
+		agendaPablo.addReunion(reunion1);
 		
 
 	}
