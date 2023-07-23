@@ -21,7 +21,13 @@ public class Main {
         City c2 = new City("Tandilia", 99000);
         City c3 = new City("Tandilandia", 120000);
         City c4 = new City("Tandileofu", 140000);
+        City c5 = new City("asdf", 250000);
+        City c6 = new City("rewqrew", 99000);
+        City c7 = new City("gdafds", 120000);
+        City c8 = new City("imdsakm", 140000);
         Province p1 = new Province("Buenos Aires");
+        Province p2 = new Province("Buenos Carlos");
+        Country co1 = new Country("Argentina");
         c1.setTax1(10000);
         c1.setTax2(10000);
         c1.setTax3(10000);
@@ -33,13 +39,13 @@ public class Main {
         c2.setTax3(10000);
         c2.setTax4(6000);
         c2.setTax5(8000);
-        c2.setExpenditure(50000);
+        c2.setExpenditure(30000);
         c3.setTax1(10000);
         c3.setTax2(10000);
         c3.setTax3(10000);
         c3.setTax4(10000);
         c3.setTax5(10000);
-        c3.setExpenditure(55000);
+        c3.setExpenditure(25000);
         c4.setTax1(10000);
         c4.setTax2(10000);
         c4.setTax3(10000);
@@ -52,7 +58,40 @@ public class Main {
         p1.addCity(c3);
         p1.addCity(c4);
 
-        p1.cityReport();
+        c1.setTax1(10000);
+        c5.setTax2(10000);
+        c5.setTax3(10000);
+        c5.setTax4(10000);
+        c5.setTax5(10000);
+        c5.setExpenditure(45000);
+        c6.setTax1(10000);
+        c6.setTax2(4000);
+        c6.setTax3(10000);
+        c6.setTax4(6000);
+        c6.setTax5(8000);
+        c6.setExpenditure(50000);
+        c7.setTax1(10000);
+        c7.setTax2(10000);
+        c7.setTax3(10000);
+        c7.setTax4(10000);
+        c7.setTax5(10000);
+        c7.setExpenditure(55000);
+        c8.setTax1(10000);
+        c8.setTax2(10000);
+        c8.setTax3(10000);
+        c8.setTax4(10000);
+        c8.setTax5(10000);
+        c8.setExpenditure(65000);
+
+        p2.addCity(c5);
+        p2.addCity(c6);
+        p2.addCity(c7);
+        p2.addCity(c8);
+
+        co1.addProvince(p1);
+        co1.addProvince(p2);
+
+        co1.provinceReport();
 
     }
 

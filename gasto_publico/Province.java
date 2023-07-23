@@ -50,8 +50,9 @@ public class Province {
         this.expenditure += expenditure;
     }
 
-    public void cityReport() {
+    public int cityReport() {
         double balance = 0;
+        int count = 0;
         // controlar el gasto publico de las ciudades que tienen mas de 100mil
         // habitantes. si tiene mas de 100mil, controlar la diferencia entre lo que se
         // gasta y lo que entra.
@@ -61,12 +62,15 @@ public class Province {
             if (check) {
                 balance = getBalance(actualCity);
                 if (balance < 0) {
-                    System.out.println("\n" + actualCity.getName() + " Tiene Balance Negativo, su ingreso es de: "
+                    count++;
+                    System.out.println("\n" + actualCity.getName() + " (Provincia de " + this.getName()
+                            + ") Tiene Balance Negativo, su ingreso es de: "
                             + actualCity.totalIncome() + "\nSu gasto de: " + actualCity.getExpenditure()
                             + "\nEsto nos deja un saldo negativo de: " + getBalance(actualCity));
                 }
             }
         }
+        return count;
     }
 
     private double getBalance(City c) {
