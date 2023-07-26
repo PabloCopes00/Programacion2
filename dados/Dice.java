@@ -9,7 +9,7 @@ public class Dice {
         lastThrow = 0;
     }
 
-    public int Throw() {
+    public int tthrow() {
         lastThrow = (int) (((Math.random() * diceFaces) + 1));
         return lastThrow;
     }

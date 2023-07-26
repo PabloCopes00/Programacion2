@@ -24,7 +24,7 @@ public class Player {
     }
 
     public int playTurn(Dice d1, Dice d2) {
-        return d1.Throw() + d2.Throw();
+        return d1.tthrow() + d2.tthrow();
     }
 
 }
