@@ -2,26 +2,20 @@ package Programacion2.dados;
 
 public class Game {
 
-    private Dice d1;
-    private Dice d2;
-    private Dice d3;
-    private Dice d4;
-
     private Player p1;
     private Player p2;
+
+    private DiceCup diceCup;
 
     private int winScore;
     private int gameLength;
 
-    public Game(String p1Name, String p2Name) {
+    public Game(String p1Name, String p2Name, int cupQuantity) {
         this.p1 = new Player(p1Name);
         this.p2 = new Player(p2Name);
-        this.d1 = new Dice(6);
-        this.d2 = new Dice(6);
-        this.d3 = new Dice(6);
-        this.d4 = new Dice(6);
         this.winScore = 7;
         this.gameLength = 10;
+        diceCup = new DiceCup(cupQuantity);
     }
 
     public String getP1() {
@@ -40,17 +34,17 @@ public class Game {
         System.out.println(statement);
 
         for (int i = 0; i < gameLength; i++) {
-            int p1Roll = p1.playTurn(d1, d2);
-            int p2Roll = p2.playTurn(d3, d4);
+            int p1Roll = p1.playTurn(diceCup);
+            int p2Roll = p2.playTurn(diceCup);
             if (p1Roll > winScore && (p1Roll > p2Roll)) {
                 p1.addScore();
-                System.out.println("Punto para " + p1.getName());
+                System.out.println("Punto para " + p1.getName() + " " + p1Roll + " - " + p2Roll);
             } else if (p2Roll > winScore && (p2Roll > p1Roll)) {
                 p2.addScore();
-                System.out.println("Punto para " + p2.getName());
+                System.out.println("Punto para " + p2.getName() + " " + p2Roll + " - " + p1Roll);
 
             } else {
-                System.out.println("Emapte");
+                System.out.println("Emapte " + p1Roll + " - " + p2Roll);
                 ;
             }
         }

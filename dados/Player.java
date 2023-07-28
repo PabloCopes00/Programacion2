@@ -4,8 +4,6 @@ public class Player {
 
     private String name;
     private int score;
-    // private int winRate;
-    // private int loseRate;
 
     public Player(String name) {
         this.name = name;
@@ -23,8 +21,8 @@ public class Player {
         this.score++;
     }
 
-    public int playTurn(Dice d1, Dice d2) {
-        return d1.tthrow() + d2.tthrow();
+    public int playTurn(DiceCup dc) {
+        return dc.tthrow();
     }
 
 }
