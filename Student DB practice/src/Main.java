@@ -16,6 +16,10 @@ public class Main {
 		Student s1 = new Student("Pablo", "Copes", 32604191, LocalDate.of(1986, 6, 23), "pablocopes86@gmail.com");
 		Student s2 = new Student("Juan", "Pelotas", 30368239, LocalDate.of(2007, 5, 29), "juancito@gmail.com");
 		Student s3 = new Student("Juana", "Laloca", 38263956, LocalDate.of(1996, 7, 12), "juana05@gmail.com");
+		Student s5 = new Student("Asdf", "Fdsa", 12546324, LocalDate.of(1999, 6, 16), "Asdf@gmail.com");
+		Student s6 = new Student("Qwerty", "Ytrewq", 87654323, LocalDate.of(1968, 2, 29), "Qwerty5@gmail.com");
+		Student s7 = new Student("Fdsa", "Qwerty", 20345788, LocalDate.of(1912, 12, 31), "Fdsa@gmail.com");
+		Student s8 = new Student("Gata", "Flora", 37653477, LocalDate.of(1944, 1, 2), "Gataf@gmail.com");
 		Student s4 = new Student("Laura", "Fasito", 37283746, LocalDate.of(1910, 8, 16), "laurita25@gmail.com");
 
 		unicen.addStudent(s1);
@@ -46,16 +50,24 @@ public class Main {
 		s4.addSubject(sub6);
 
 		unicen.enrolledSubject();
-		System.out.println(sub1.getProfessorName());
-		s1.dropSubject(sub5);
-		s1.dropSubject(sub6);
-		s1.addSubject(sub1);
-		unicen.enrolledSubject();
-		s1.addSubject(sub5);
-		s1.addSubject(sub6);
-		unicen.addStudent(s1);
-		unicen.enrolledSubject();
-
+//		System.out.println(sub1.getProfessorName());
+//		s1.dropSubject(sub5);
+//		s1.dropSubject(sub6);
+//		s1.addSubject(sub1);
+//		unicen.enrolledSubject();
+//		s1.addSubject(sub5);
+//		s1.addSubject(sub6);
+//		unicen.addStudent(s1);
+//		unicen.enrolledSubject();
+		System.out.println(s1.highestWorkload());
+		System.out.println(s2.highestWorkload());
+		System.out.println(s3.highestWorkload());
+		System.out.println(s4.highestWorkload());
+		unicen.studentList();
+		unicen.dropSubject(s4);
+		unicen.studentList();
+		unicen.addStudent(s4);
+		unicen.studentList();
 	}
 
 }

@@ -45,4 +45,10 @@ public class AcademicRecord {
 		}
 	}
 
+	public void studentList() {
+		System.out.println("Student List:");
+		for (Student student : aRecord) {
+			System.out.println(student.getId() + ") " + student.getLastName() + " " + student.getName());
+		}
+	}
 }

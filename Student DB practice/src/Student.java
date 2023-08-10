@@ -64,13 +64,16 @@ public class Student extends Person {
 	public String highestWorkload() {
 		int aux = 0;
 		String subj = "";
+		String prof = "";
 		for (int i = 0; i < subject.size(); i++) {
 			if (subject.get(i).getWeeklyHours() > aux) {
 				aux = subject.get(i).getWeeklyHours();
 				subj = subject.get(i).getSubject();
+				prof = subject.get(i).getProfessorName();
 			}
 		}
-		return "The subject with the highest workload is: " + subj + ", " + aux + "hs.";
+		return this.getName() + " " + this.getLastName() + ": The subject with the highest workload is " + subj + ", "
+				+ aux + "hs. with Proffesor: " + prof;
 	}
 
 	@Override
