@@ -79,7 +79,7 @@ public class Task {
 	public String taskTimeRemaining() {
 		String statement = "";
 		LocalDate now = LocalDate.now();
-		Period period = Period.between(now, dueDate);
+		Period period = Period.between(now, this.dueDate);
 		if (now.isBefore(this.dueDate)) {
 			statement = "You still have " + period.getDays() + " days to complete the task.";
 			return statement;
@@ -90,6 +90,11 @@ public class Task {
 			statement = "The task has already expired. Hurry up!";
 			return statement;
 		}
+	}
+
+	public boolean ExpiredTask() {
+		LocalDate now = LocalDate.now();
+		return (now.isAfter(this.dueDate)) ? true : false;
 	}
 
 }

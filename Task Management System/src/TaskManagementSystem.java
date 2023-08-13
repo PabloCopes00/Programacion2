@@ -9,21 +9,71 @@ public class TaskManagementSystem {
 	}
 
 	public void getTask() {
+		System.out.println("\nTask List:");
 		for (Task task : taskManagement) {
-			System.out.println(task.getTitle() + " - " + task.getDescription());
+			String statement = (task.taskStatus()) ? "Completed" : "Incomplete";
+			System.out.println("[" + task.getDate() + "] " + task.getTitle() + " - " + task.getDescription()
+					+ " - Due Date: " + task.getDueDate() + " - " + statement);
 		}
-		System.out.println("\n");
+	}
+
+	public void taskGet(Task t) {
+		String statement = (t.taskStatus()) ? "Completed" : "Incomplete";
+		System.out.println("[" + t.getDate() + "] " + t.getTitle() + " - " + t.getDescription() + " - Due Date: "
+				+ t.getDueDate() + " - " + statement);
+	}
+
+	public void getExpiredTask() {
+		System.out.println("\nExpired Task:");
+		for (Task task : taskManagement) {
+			if (task.ExpiredTask()) {
+				taskGet(task);
+			}
+		}
+	}
+
+	public void getUnexpiredTask() {
+		System.out.println("\nUnexpired Task:");
+		for (Task task : taskManagement) {
+			if (!task.ExpiredTask()) {
+				taskGet(task);
+			}
+		}
+	}
+
+	public void getTaskCompleted() {
+		System.out.println("\nTask Completed:");
+		for (Task task : taskManagement) {
+			boolean check = task.taskStatus();
+			String statement = (check) ? "Completed" : "Incomplete";
+			if (check) {
+				System.out.println("[" + task.getDate() + "] " + task.getTitle() + " - " + task.getDescription()
+						+ " - Due Date: " + task.getDueDate() + " - " + statement);
+			}
+		}
+	}
+
+	public void getTaskIncompleted() {
+		System.out.println("\nTask Incompleted:");
+		for (Task task : taskManagement) {
+			boolean check = task.taskStatus();
+			String statement = (check) ? "Completed" : "Incomplete";
+			if (!check) {
+				System.out.println("[" + task.getDate() + "] " + task.getTitle() + " - " + task.getDescription()
+						+ " - Due Date: " + task.getDueDate() + " - " + statement);
+			}
+		}
 	}
 
 	public void addTask(Task t) {
 		taskManagement.add(t);
 	}
 
-	public void remove(int t) {
-		if (t >= 0 && t < taskManagement.size()) {
-			taskManagement.remove(t);
-		}
-	}
+//	public void remove(int t) {
+//		if (t >= 0 && t < taskManagement.size()) {
+//			taskManagement.remove(t);
+//		}
+//	}
 
 	public void removeT(Task t) {
 		if (taskManagement.contains(t)) {
@@ -36,6 +86,14 @@ public class TaskManagementSystem {
 			JOptionPane.showMessageDialog(null,
 					"The task " + t.getTitle() + " has either been removed or is not present in the task list.",
 					"Alert", JOptionPane.WARNING_MESSAGE);
+		}
+	}
+
+	public void removeCompleted() {
+		for (Task task : taskManagement) {
+			if (task.taskStatus()) {
+				taskManagement.remove(task);
+			}
 		}
 	}
 

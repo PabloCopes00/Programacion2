@@ -16,6 +16,12 @@ public class Main {
 		agenda.getTask();
 		agenda.removeT(t4);
 		agenda.getTask();
+		t1.setCompleted(true);
+		agenda.getTaskCompleted();
+		agenda.getTaskIncompleted();
+		agenda.getUnexpiredTask();
+		agenda.getExpiredTask();
+
 	}
 
 }
