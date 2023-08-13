@@ -1,27 +1,35 @@
 import java.time.LocalDate;
+import java.time.Period;
 
-public abstract class Task {
+public class Task {
 
 	private String title;
 	private String description;
 	int priority;
+
+	private Person user;
 
 	boolean completed;
 
 	LocalDate date;
 	LocalDate dueDate;
 
-	public Task(String title, String description, int priority, LocalDate dueDate) {
+	public Task(Person user, String title, String description, int priority, LocalDate dueDate) {
 		this.title = title;
 		this.description = description;
 		this.priority = priority;
 		this.completed = false;
 		this.dueDate = dueDate;
 		this.date = LocalDate.now();
+		this.user = user;
 	}
 
-	public Task(String description, int priority, LocalDate dueDate) {
-		this("New Task", description, priority, dueDate);
+	public Person getUser() {
+		return user;
+	}
+
+	public Task(Person user, String description, int priority, LocalDate dueDate) {
+		this(user, "New Task", description, priority, dueDate);
 	}
 
 	public String getTitle() {
@@ -48,7 +56,7 @@ public abstract class Task {
 		this.priority = priority;
 	}
 
-	public boolean isCompleted() {
+	public boolean taskStatus() {
 		return completed;
 	}
 
@@ -64,14 +72,24 @@ public abstract class Task {
 		return dueDate;
 	}
 
-	public abstract void displayInfo();
-
-	public void getTaskStatus() {
+	public void displayInfo() {
 
 	}
 
-	public void taskTimeRemaining() {
-
+	public String taskTimeRemaining() {
+		String statement = "";
+		LocalDate now = LocalDate.now();
+		Period period = Period.between(now, dueDate);
+		if (now.isBefore(this.dueDate)) {
+			statement = "You still have " + period.getDays() + " days to complete the task.";
+			return statement;
+		} else if (now.isEqual(this.dueDate)) {
+			statement = "Today is the due date! " + LocalDate.now() + " Complete the task now.";
+			return statement;
+		} else {
+			statement = "The task has already expired. Hurry up!";
+			return statement;
+		}
 	}
 
 }
