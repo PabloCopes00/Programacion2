@@ -69,11 +69,18 @@ public class TaskManagementSystem {
 		taskManagement.add(t);
 	}
 
-//	public void remove(int t) {
-//		if (t >= 0 && t < taskManagement.size()) {
-//			taskManagement.remove(t);
-//		}
-//	}
+	public void editTask(Task t, String s) {
+		boolean spotted = false;
+		int i = 0;
+		while (i < taskManagement.size() && !spotted) {
+			Task actual = taskManagement.get(i);
+			while (!spotted & actual == t) {
+				actual.setDescription(s);
+				spotted = true;
+			}
+			i++;
+		}
+	}
 
 	public void removeT(Task t) {
 		if (taskManagement.contains(t)) {

@@ -14,13 +14,15 @@ public class Main {
 		agenda.addTask(t3);
 		agenda.addTask(t4);
 		agenda.getTask();
-		agenda.removeT(t4);
-		agenda.getTask();
+//		agenda.removeT(t4);
+//		agenda.getTask();
 		t1.setCompleted(true);
-		agenda.getTaskCompleted();
-		agenda.getTaskIncompleted();
-		agenda.getUnexpiredTask();
-		agenda.getExpiredTask();
+//		agenda.getTaskCompleted();
+//		agenda.getTaskIncompleted();
+//		agenda.getUnexpiredTask();
+//		agenda.getExpiredTask();
+		agenda.editTask(t4, "Nueva nota sin titulo editada");
+		agenda.getTask();
 
 	}
 

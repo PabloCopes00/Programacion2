@@ -2,7 +2,8 @@ import java.time.LocalDate;
 import java.time.Period;
 
 public class Task {
-
+	private int id;
+	private static int idCount = 1;
 	private String title;
 	private String description;
 	int priority;
@@ -15,6 +16,7 @@ public class Task {
 	LocalDate dueDate;
 
 	public Task(Person user, String title, String description, int priority, LocalDate dueDate) {
+		this.id = idCount;
 		this.title = title;
 		this.description = description;
 		this.priority = priority;
@@ -22,6 +24,7 @@ public class Task {
 		this.dueDate = dueDate;
 		this.date = LocalDate.now();
 		this.user = user;
+		idCount++;
 	}
 
 	public Person getUser() {
@@ -95,6 +98,20 @@ public class Task {
 	public boolean ExpiredTask() {
 		LocalDate now = LocalDate.now();
 		return (now.isAfter(this.dueDate)) ? true : false;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		Task t = (Task) o;
+		if (this.getId() == t.getId()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public int getId() {
+		return id;
 	}
 
 }
