@@ -43,6 +43,11 @@ public class Main {
 		argentina.addPerson(ph1);
 
 		argentina.teamList();
-
+		argentina.showList("Player");
+		argentina.showList("Coach");
+		argentina.showList("Physiotherapist");
+		System.out.println(p1.isAvailable());
+		argentina.availableList();
+		argentina.notAvailableList();
 	}
 }

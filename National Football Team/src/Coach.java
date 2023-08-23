@@ -17,9 +17,4 @@ public class Coach extends Person {
 		this.federation = federation;
 	}
 
-	@Override
-	public String toString() {
-		return this.getProffesion() + " - " + this.getName() + " " + this.getLastName();
-	}
-
 }

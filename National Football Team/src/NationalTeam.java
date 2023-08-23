@@ -41,4 +41,30 @@ public class NationalTeam {
 		}
 	}
 
+	public void showList(String s) {
+		System.out.println("\n" + s + " List:");
+		for (Person person : nationalTeam) {
+			if (person.getProffesion().contains(s))
+				System.out.println(person.toString());
+		}
+	}
+
+	public void availableList() {
+		System.out.println("\nAvailable List:");
+		for (Person p : nationalTeam) {
+			if (p.checkAvailable()) {
+				System.out.println(p.toString());
+			}
+		}
+	}
+
+	public void notAvailableList() {
+		System.out.println("\nNot Available List:");
+		for (Person p : nationalTeam) {
+			if (!p.checkAvailable()) {
+				System.out.println(p.toString() + " - is " + p.getStatus());
+			}
+		}
+	}
+
 }

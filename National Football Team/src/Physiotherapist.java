@@ -26,9 +26,4 @@ public class Physiotherapist extends Person {
 		this.yearsOfExperience = yearsOfExperience;
 	}
 
-	@Override
-	public String toString() {
-		return this.getProffesion() + " - " + this.getName() + " " + this.getLastName();
-	}
-
 }

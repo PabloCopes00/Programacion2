@@ -27,19 +27,24 @@ public class Person {
 		this.lastName = lastName;
 		this.passport = pasport;
 		this.birthDate = birthDate;
+		this.status = status;
 		this.proffesion = proffesion;
 	}
 
 	public String getName() {
-		return name;
+		return this.name;
+	}
+
+	public String getLastName() {
+		return this.lastName;
+	}
+
+	public String getFullName() {
+		return this.name + " " + this.lastName;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getLastName() {
-		return lastName;
 	}
 
 	public void setLastName(String lastName) {
@@ -62,15 +67,19 @@ public class Person {
 		this.birthDate = birthDate;
 	}
 
-	public String getStatus(Person p) {
+	public String getStatus() {
 		return this.status;
 	}
 
-	public boolean available(Person p) {
-		if (this.getStatus(p).equals("Homebound")) {
-			return true;
+	public boolean checkAvailable() {
+		return this.getStatus().equals("Homebound");
+	}
+
+	public String isAvailable() {
+		if (this.checkAvailable()) {
+			return "\n" + this.getFullName() + " Is available.";
 		} else {
-			return false;
+			return "\n" + this.getFullName() + " Is not available, he is " + this.getStatus();
 		}
 	}
 
@@ -85,5 +94,11 @@ public class Person {
 	public void setProffesion(String proffesion) {
 		this.proffesion = proffesion;
 	}
+
+	@Override
+	public String toString() {
+		return this.getProffesion() + " - " + this.getName() + " " + this.getLastName();
+	}
+	
 
 }
