@@ -49,22 +49,39 @@ public class NationalTeam {
 		}
 	}
 
-	public void availableList() {
-		System.out.println("\nAvailable List:");
-		for (Person p : nationalTeam) {
-			if (p.checkAvailable()) {
-				System.out.println(p.toString());
+//	public void availableList() {
+//		System.out.println("\nAvailable List:");
+//		for (Person p : nationalTeam) {
+//			if (p.checkAvailable()) {
+//				System.out.println(p.toString());
+//			}
+//		}
+//	}
+//
+//	public void notAvailableList() {
+//		System.out.println("\nNot Available List:");
+//		for (Person p : nationalTeam) {
+//			if (!p.checkAvailable()) {
+//				System.out.println(p.toString() + " - is " + p.getStatus());
+//			}
+//		}
+//	}
+
+	public void availableList(String s) {
+		if (s.equals("is")) {
+			System.out.println("\nAvailable List:");
+			for (Person p : nationalTeam) {
+				if (p.checkAvailable()) {
+					System.out.println(p.toString());
+				}
+			}
+		} else if (s.equals("not")) {
+			System.out.println("\nNot Available List:");
+			for (Person p : nationalTeam) {
+				if (!p.checkAvailable()) {
+					System.out.println(p.toString() + " - is " + p.getStatus());
+				}
 			}
 		}
 	}
-
-	public void notAvailableList() {
-		System.out.println("\nNot Available List:");
-		for (Person p : nationalTeam) {
-			if (!p.checkAvailable()) {
-				System.out.println(p.toString() + " - is " + p.getStatus());
-			}
-		}
-	}
-
 }

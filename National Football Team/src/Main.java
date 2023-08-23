@@ -47,7 +47,7 @@ public class Main {
 		argentina.showList("Coach");
 		argentina.showList("Physiotherapist");
 		System.out.println(p1.isAvailable());
-		argentina.availableList();
-		argentina.notAvailableList();
+		argentina.availableList("is");
+		argentina.availableList("not");
 	}
 }
