@@ -21,10 +21,12 @@ public class Main {
 		cm.addCourt(pc);
 		cm.addCourt(pc1);
 		cm.courtList();
-//		cm.addCourt(pc2);
-//		cm.addCourt(pc3);
-//		cm.addCourt(pc4);
-//		cm.addCourt(pc5);
+		cm.addCourt(pc2);
+		System.out.println("Es miembro? " + pablo.isMember());
+		cm.addCourt(pc3);
+		cm.addCourt(pc4);
+		cm.addCourt(pc5);
+		System.out.println("Es miembro? " + pablo.isMember());
 	}
 
 }

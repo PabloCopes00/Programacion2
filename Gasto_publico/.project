@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>dados</name>
+	<name>Gasto_publico</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +16,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1690819121594</id>
+			<id>1690819121608</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

@@ -2,11 +2,13 @@
 import java.time.LocalDateTime;
 
 public class Court {
-
+	private static final String FOOTBALL = "football";
+	private static final String PADDLE = "paddle";
 	private User user;
 	private LocalDateTime date;
 
 	private String type;
+	private int typeQuantity;
 	private int fee;
 
 	public Court(User user, LocalDateTime date, int fee, String type) {
@@ -14,6 +16,21 @@ public class Court {
 		this.date = date;
 		this.type = type;
 		this.fee = fee;
+		this.typeQuantity = setTypeQuantity();
+	}
+
+	private int setTypeQuantity() {
+		if (type.equals(FOOTBALL)) {
+			return 2;
+		} else if (type.equals(FOOTBALL)) {
+			return 4;
+		} else {
+			return 0;
+		}
+	}
+
+	public int getTypeQuantity() {
+		return this.typeQuantity;
 	}
 
 	public User getUser() {
@@ -42,6 +59,11 @@ public class Court {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		return this.getType().equals(((Court) o).getType());
 	}
 
 	@Override
