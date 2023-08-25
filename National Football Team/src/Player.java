@@ -39,7 +39,7 @@ public class Player extends Person {
 
 	@Override
 	public String toString() {
-		return this.getProffesion() + " - " + this.getName() + " " + this.getLastName() + " - " + this.getPosition();
+		return super.toString() + " - " + this.getPosition();
 	}
 
 }

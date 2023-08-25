@@ -14,11 +14,13 @@
 import java.time.LocalDate;
 
 public class Person {
-
+	private static final String HOMEBOUND = "Homebound";
+	
 	private String name;
 	private String lastName;
 	private int passport;
 	private LocalDate birthDate;
+	
 	private String status;
 	private String proffesion;
 
@@ -72,7 +74,7 @@ public class Person {
 	}
 
 	public boolean checkAvailable() {
-		return this.getStatus().equals("Homebound");
+		return this.getStatus().equals(HOMEBOUND);
 	}
 
 	public String isAvailable() {
@@ -99,6 +101,5 @@ public class Person {
 	public String toString() {
 		return this.getProffesion() + " - " + this.getName() + " " + this.getLastName();
 	}
-	
 
 }

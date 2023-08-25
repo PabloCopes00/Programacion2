@@ -78,7 +78,7 @@ public class Province {
     private boolean populationMore100k(City c) {
         int requirement = 100000;
         boolean checked = false;
-        if (c.getPopulation() > requirement) {
+		if (c.getPopulation() > requirement) {
             checked = true;
         }
         return checked;

@@ -1,15 +1,19 @@
 
 public class User {
 
+	private static final int MEMBERSHIP_BOOKINGS = 4;
+
 	private String name;
 	private String lastName;
-	private long id;
+	private int id;
+	private int bookingCount;
 	private boolean member;
 
-	public User(String name, String lastName, long id) {
+	public User(String name, String lastName, int id) {
 		this.name = name;
 		this.lastName = lastName;
 		this.id = id;
+		this.bookingCount = 0;
 		this.member = false;
 	}
 
@@ -25,6 +29,10 @@ public class User {
 		return lastName;
 	}
 
+	public String getUserName() {
+		return this.getName() + " " + this.getLastName();
+	}
+
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
@@ -33,8 +41,19 @@ public class User {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getBookingCount() {
+		return bookingCount;
+	}
+
+	public void setBookingCount() {
+		this.bookingCount++;
+		if (bookingCount >= MEMBERSHIP_BOOKINGS) {
+			this.setMember(true);
+		}
 	}
 
 	public boolean isMember() {
@@ -43,5 +62,12 @@ public class User {
 
 	public void setMember(boolean member) {
 		this.member = member;
+	}
+
+	@Override
+	public String toString() {
+		String member = "";
+		member = (this.isMember()) ? " Active membership" : " Inactive membership";
+		return this.getUserName() + member;
 	}
 }

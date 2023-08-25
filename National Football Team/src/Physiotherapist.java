@@ -7,6 +7,8 @@ public class Physiotherapist extends Person {
 	public Physiotherapist(String name, String lastName, int pasport, LocalDate birthDate, String status,
 			String proffesion, int registrationNumber, int yearsOfExperience) {
 		super(name, lastName, pasport, birthDate, status, proffesion);
+		this.registrationNumber = registrationNumber;
+		this.yearsOfExperience = yearsOfExperience;
 
 	}
 

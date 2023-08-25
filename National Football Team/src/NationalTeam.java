@@ -3,6 +3,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class NationalTeam {
+	private static final String AVAILABLE = "available";
+	private static final String UNAVAILABLE = "unavailable";
+
 	ArrayList<Person> nationalTeam;
 
 	public NationalTeam() {
@@ -18,9 +21,9 @@ public class NationalTeam {
 		}
 	}
 
-	public void drop(int p) {
-		if (p > 0 && p < nationalTeam.size()) {
-			nationalTeam.remove(p);
+	public void drop(int n) {
+		if (n > 0 && n < nationalTeam.size()) {
+			nationalTeam.remove(n);
 		}
 	}
 
@@ -68,14 +71,15 @@ public class NationalTeam {
 //	}
 
 	public void availableList(String s) {
-		if (s.equals("is")) {
+		s.toLowerCase();
+		if (s.equals(AVAILABLE)) {
 			System.out.println("\nAvailable List:");
 			for (Person p : nationalTeam) {
 				if (p.checkAvailable()) {
 					System.out.println(p.toString());
 				}
 			}
-		} else if (s.equals("not")) {
+		} else if (s.equals(UNAVAILABLE)) {
 			System.out.println("\nNot Available List:");
 			for (Person p : nationalTeam) {
 				if (!p.checkAvailable()) {
