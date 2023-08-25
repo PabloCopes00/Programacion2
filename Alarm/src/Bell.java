@@ -1,6 +1,6 @@
 
 public class Bell {
-
+	private static final String RING = "RIIIIIIIIIIINNG";
 	private int alarmVolume;
 	private boolean bellSound;
 
@@ -18,15 +18,19 @@ public class Bell {
 	}
 
 	public String ring() {
-		this.bellSound(true);
-		return "RIIIIIIIIIIINNG";
+		this.bellActive(true);
+		return RING;
 	}
 
-	public boolean getBellSound() {
+	public String bellSound() {
+		return RING;
+	}
+
+	public boolean isBellActive() {
 		return bellSound;
 	}
 
-	public void bellSound(boolean bellSound) {
+	public void bellActive(boolean bellSound) {
 		this.bellSound = bellSound;
 	}
 

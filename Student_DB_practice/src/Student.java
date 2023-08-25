@@ -79,11 +79,7 @@ public class Student extends Person {
 	@Override
 	public boolean equals(Object o) {
 		Person p = (Person) o;
-		if (this.getDni() == p.getDni()) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.getDni() == p.getDni();
 	}
 
 }

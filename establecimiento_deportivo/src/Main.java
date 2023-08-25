@@ -8,12 +8,12 @@ public class Main {
 		User juan = new User("Juan", "Perez", 765423);
 		User laura = new User("Laura", "Gimenez", 8374893);
 
-		Court pc = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), 400, "football");
-		Court pc1 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), 400, "football");
-		Court pc2 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), 400, "football");
-		Court pc3 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), 400, "football");
-		Court pc4 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), 400, "football");
-		Court pc5 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), 400, "football");
+		Court pc = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), "football");
+		Court pc1 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), "football");
+		Court pc2 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), "football");
+		Court pc3 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
+		Court pc4 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
+		Court pc5 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
 
 		CourtManagement cm = new CourtManagement();
 		CourtManagement cm1 = new CourtManagement();

@@ -22,7 +22,7 @@ public class LightAlarm extends Alarm {
 	@Override
 	public String check() {
 		String bellStatus = super.check();
-		if (bellStatus.equals("RIIIIIIIIIIINNG")) {
+		if (bellStatus.equals(this.bell.bellSound())) {
 			lightUp();
 		}
 		return bellStatus;

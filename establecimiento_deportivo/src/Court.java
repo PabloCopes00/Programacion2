@@ -2,8 +2,16 @@
 import java.time.LocalDateTime;
 
 public class Court {
-	private static final String FOOTBALL = "football";
-	private static final String PADDLE = "paddle";
+
+	private CourtManagement m;
+
+	protected static final String FOOTBALL = "football";
+	protected static final String PADDLE = "paddle";
+	private static final int PCOURT = CourtManagement.PCOURT;
+	private static final int FCOURT = CourtManagement.FCOURT;
+	private static final int PADDLEFEE = 200;
+	private static final int FOOTBALLFEE = 400;
+
 	private User user;
 	private LocalDateTime date;
 
@@ -11,21 +19,31 @@ public class Court {
 	private int typeQuantity;
 	private int fee;
 
-	public Court(User user, LocalDateTime date, int fee, String type) {
+	public Court(User user, LocalDateTime date, String type) {
 		this.user = user;
 		this.date = date;
 		this.type = type;
-		this.fee = fee;
 		this.typeQuantity = setTypeQuantity();
+		this.fee = setFee();
 	}
 
 	private int setTypeQuantity() {
 		if (type.equals(FOOTBALL)) {
-			return 2;
+			return FCOURT;
 		} else if (type.equals(FOOTBALL)) {
-			return 4;
+			return PCOURT;
 		} else {
 			return 0;
+		}
+	}
+
+	public int setFee() {
+		int q = getTypeQuantity();
+
+		if (this.getTypeQuantity() == FCOURT) {
+			return FOOTBALLFEE;
+		} else {
+			return PADDLEFEE;
 		}
 	}
 
@@ -47,10 +65,6 @@ public class Court {
 
 	public int getFee() {
 		return fee;
-	}
-
-	public void setFee(int fee) {
-		this.fee = fee;
 	}
 
 	public String getType() {

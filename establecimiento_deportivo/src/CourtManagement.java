@@ -3,10 +3,10 @@ import java.util.ArrayList;
 public class CourtManagement {
 	private ArrayList<Court> court;
 
-	private static final int PCOURT = 4;
-	private static final int FCOURT = 2;
-	private static final String FOOTBALL = "football";
-	private static final String PADDLE = "paddle";
+	protected static final int PCOURT = 4;
+	protected static final int FCOURT = 2;
+	private static final String FOOTBALL = Court.FOOTBALL;
+	private static final String PADDLE = Court.PADDLE;
 
 	public CourtManagement() {
 		court = new ArrayList<Court>();

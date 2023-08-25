@@ -4,6 +4,7 @@ public class Country {
     private String name;
     private int population;
     private int expenditure;
+	private ArrayList<Province> province;
 
     public Country(String name) {
         this.name = name;
@@ -13,7 +14,6 @@ public class Country {
 
     }
 
-    private ArrayList<Province> province;
 
     public String getName() {
         return name;
@@ -37,10 +37,6 @@ public class Country {
 
     public void setPopulation(int population) {
         this.population = population;
-    }
-
-    public ArrayList<Province> getProvince() {
-        return province;
     }
 
     public void addProvince(Province p) {

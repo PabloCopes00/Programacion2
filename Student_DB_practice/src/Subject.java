@@ -36,10 +36,6 @@ public class Subject {
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.getSubject().equals(((Subject) o).getSubject());
 	}
 }

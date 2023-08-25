@@ -1,6 +1,5 @@
 
 public class Alarm {
-
 	private boolean brokeGlass;
 	private boolean openedDoorWindow;
 	private boolean detectedMovement;
@@ -48,6 +47,6 @@ public class Alarm {
 		this.setBrokeGlass(false);
 		this.setDetectedMovement(false);
 		this.setOpenedDoorWindow(false);
-		this.bell.bellSound(false);
+		this.bell.bellActive(false);
 	}
 }
