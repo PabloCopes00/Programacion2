@@ -99,11 +99,26 @@ public class CourtManagement {
 //		}
 //	}
 
-	public void courtList() {
-
-		for (Court cc : court) {
-			cc.toString();
+	public void delCourt(Court c) {
+		int i = court.indexOf(c);
+		try {
+			this.court.remove(i);
+		} catch (Exception e) {
+			System.out.println("The Court was not found in the list.");
 		}
+	}
 
+	public void courtList() {
+		System.out.println("\nCourt List:");
+		for (Court cc : court) {
+			System.out.println(cc.toString());
+		}
+	}
+	
+	public void courtListTime() {
+		System.out.println("\nCourt List:");
+		for (Court cc : court) {
+			System.out.println(cc.toString());
+		}
 	}
 }

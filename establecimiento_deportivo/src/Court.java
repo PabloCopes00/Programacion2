@@ -11,6 +11,7 @@ public class Court {
 	private static final int FCOURT = CourtManagement.FCOURT;
 	private static final int PADDLEFEE = 200;
 	private static final int FOOTBALLFEE = 400;
+	private static final double DISCOUNT = 0.1;
 
 	private User user;
 	private LocalDateTime date;
@@ -41,9 +42,17 @@ public class Court {
 		int q = getTypeQuantity();
 
 		if (this.getTypeQuantity() == FCOURT) {
-			return FOOTBALLFEE;
+			if (this.getUser().isMember()) {
+				return FOOTBALLFEE - (int) (FOOTBALLFEE * DISCOUNT);
+			} else {
+				return FOOTBALLFEE;
+			}
 		} else {
-			return PADDLEFEE;
+			if (this.getUser().isMember()) {
+				return PADDLEFEE - (int) (PADDLEFEE * DISCOUNT);
+			} else {
+				return PADDLEFEE;
+			}
 		}
 	}
 
@@ -77,7 +86,8 @@ public class Court {
 
 	@Override
 	public boolean equals(Object o) {
-		return this.getType().equals(((Court) o).getType());
+		return (this.getType().equals(((Court) o).getType())
+				&& this.getUser().getUserName().equals(((Court) o).getUser().getUserName()));
 	}
 
 	@Override

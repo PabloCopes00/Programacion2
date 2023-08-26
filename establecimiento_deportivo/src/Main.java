@@ -12,8 +12,8 @@ public class Main {
 		Court pc1 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), "football");
 		Court pc2 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 20, 00), "football");
 		Court pc3 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
-		Court pc4 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
-		Court pc5 = new Court(pablo, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
+		Court pc4 = new Court(juan, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
+		Court pc5 = new Court(laura, LocalDateTime.of(2023, 10, 10, 21, 00), "football");
 
 		CourtManagement cm = new CourtManagement();
 		CourtManagement cm1 = new CourtManagement();
@@ -25,7 +25,11 @@ public class Main {
 		System.out.println("Es miembro? " + pablo.isMember());
 		cm.addCourt(pc3);
 		cm.addCourt(pc4);
+		cm.courtList();
+		cm.delCourt(pc4);
+		cm.courtList();
 		cm.addCourt(pc5);
+		cm.courtList();
 		System.out.println("Es miembro? " + pablo.isMember());
 	}
 
