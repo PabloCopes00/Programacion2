@@ -14,7 +14,7 @@
 import java.time.LocalDate;
 
 public class Person {
-	private static final String HOMEBOUND = "Homebound";
+	private static final String HOMEBOUND = "Homebound"; //ATRIBUTO
 	
 	private String name;
 	private String lastName;
@@ -77,13 +77,13 @@ public class Person {
 		return this.getStatus().equals(HOMEBOUND);
 	}
 
-	public String isAvailable() {
-		if (this.checkAvailable()) {
-			return "\n" + this.getFullName() + " Is available.";
-		} else {
-			return "\n" + this.getFullName() + " Is not available, he is " + this.getStatus();
-		}
-	}
+//	public String isAvailable() {
+//		if (this.checkAvailable()) {
+//			return "\n" + this.getFullName() + " Is available.";
+//		} else {
+//			return "\n" + this.getFullName() + " Is not available, he is " + this.getStatus();
+//		}
+//	}
 
 	public void setStatus(String status) {
 		this.status = status;

@@ -2,13 +2,8 @@
 import java.time.LocalDateTime;
 
 public class Court {
-
-	private CourtManagement m;
-
 	protected static final String FOOTBALL = "football";
 	protected static final String PADDLE = "paddle";
-	private static final int PCOURT = CourtManagement.PCOURT;
-	private static final int FCOURT = CourtManagement.FCOURT;
 	private static final int PADDLEFEE = 200;
 	private static final int FOOTBALLFEE = 400;
 	private static final double DISCOUNT = 0.1;
@@ -24,15 +19,15 @@ public class Court {
 		this.user = user;
 		this.date = date;
 		this.type = type;
-		this.typeQuantity = setTypeQuantity();
-		this.fee = setFee();
+		this.typeQuantity = setTypeQuantity();  // refactorizar esto deberia ir en el management
+		this.fee = setFee();  // refactorizar esto deberia ir en el management 
 	}
 
-	private int setTypeQuantity() {
+	private int setTypeQuantity() {  //setea la cantidad, si es igual a football setea 2 sino 4.
 		if (type.equals(FOOTBALL)) {
-			return FCOURT;
+			return CourtManagement.FCOURT;
 		} else if (type.equals(FOOTBALL)) {
-			return PCOURT;
+			return CourtManagement.PCOURT;
 		} else {
 			return 0;
 		}
@@ -41,15 +36,15 @@ public class Court {
 	public int setFee() {
 		int q = getTypeQuantity();
 
-		if (this.getTypeQuantity() == FCOURT) {
-			if (this.getUser().isMember()) {
+		if (this.getTypeQuantity() == CourtManagement.FCOURT) {  //toma la cantidad y si es 2 y es miembro hace el descuento
+			if (this.getUser().isMember()) {                    //sino da el precio completo. 
 				return FOOTBALLFEE - (int) (FOOTBALLFEE * DISCOUNT);
 			} else {
 				return FOOTBALLFEE;
 			}
 		} else {
 			if (this.getUser().isMember()) {
-				return PADDLEFEE - (int) (PADDLEFEE * DISCOUNT);
+				return PADDLEFEE - (int) (PADDLEFEE * DISCOUNT);  //idem arriba.
 			} else {
 				return PADDLEFEE;
 			}
@@ -85,13 +80,13 @@ public class Court {
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		return (this.getType().equals(((Court) o).getType())
+	public boolean equals(Object o) {                 //chequea que el tipo de cancha sea el mismo y chequea que el usuario 
+		return (this.getType().equals(((Court) o).getType()) //sea el mismo para saber que una cancha esta repetida
 				&& this.getUser().getUserName().equals(((Court) o).getUser().getUserName()));
 	}
 
 	@Override
-	public String toString() {
+	public String toString() {  //redefinimos el toString para mostrar esto.
 		return this.getUser().getUserName() + " - " + this.getDate() + " - " + this.getType();
 	}
 }

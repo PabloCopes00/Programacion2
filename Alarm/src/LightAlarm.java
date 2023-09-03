@@ -21,7 +21,7 @@ public class LightAlarm extends Alarm {
 
 	@Override
 	public String check() {
-		String bellStatus = super.check();
+		String bellStatus = super.check(); // BOOLEAN
 		if (bellStatus.equals(this.bell.bellSound())) {
 			lightUp();
 		}

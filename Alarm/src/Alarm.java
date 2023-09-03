@@ -40,7 +40,7 @@ public class Alarm {
 
 	public String check() {
 		return (this.isBrokeGlass() || this.isOpenedDoor() || this.detectedMovement()) ? this.bell.ring()
-				: "The house is properly secured";
+				: "The house is properly secured";  //BOOLEAN
 	}
 
 	public void disableAlarm() {
