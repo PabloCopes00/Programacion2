@@ -23,7 +23,64 @@ public class Student {
 	// su conjunto de cualidades y el conjunto de familiares que asisten a la
 	// escuela.
 	private String name;
-	private ArrayList<Attributes> attributes;
-	private ArrayList<Student> schoolRelatives;
+	private ArrayList<String> attribute;
+	private ArrayList<Student> schoolRelative;
+
+	public Student(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void addAttribute(String s) {
+		if (!this.attribute.contains(s)) {
+			this.attribute.add(s);
+		}
+	}
+
+	public void removeAttribute(String s) {
+		if (this.attribute.contains(s)) {
+			this.attribute.remove(s);
+		}
+	}
+
+	public String getAttributes() {
+		String statement = "";
+		for (String string : this.attribute) {
+			statement += "\nAttribute: " + string;
+		}
+		return statement;
+	}
+
+	public void addSchoolRelative(Student s) {
+		if (!this.schoolRelative.contains(s)) {
+			this.schoolRelative.add(s);
+		}
+	}
+
+	public void removeSchoolRelative(Student s) {
+		if (this.schoolRelative.contains(s)) {
+			this.schoolRelative.remove(s);
+		}
+	}
+
+	public String getSchoolRelative() {
+		String statement = "";
+		for (Student student : this.schoolRelative) {
+			statement += "\nRelative: " + student.getName();
+		}
+		return statement;
+	}
+
+	@Override
+	public String toString() {
+		return "\nName: " + this.getName() + this.getAttributes() + this.getSchoolRelative();
+	}
 
 }
