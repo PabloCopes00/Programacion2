@@ -15,7 +15,7 @@ public class Trabajo {
 	}
 
 	public ArrayList<String> getTrabajo() {
-		return new ArrayList<>(this.palabras);
+		return new ArrayList<String>(this.palabras);
 	}
 
 	public boolean tieneEstaPalabra(String s) {

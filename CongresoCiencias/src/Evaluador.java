@@ -20,7 +20,7 @@ public class Evaluador {
 	}
 
 	public ArrayList<String> getConocimientos() {
-		return new ArrayList<>(this.conocimientos);
+		return new ArrayList<String>(this.conocimientos);
 	}
 
 	public void addTrabajo(Trabajo t) {

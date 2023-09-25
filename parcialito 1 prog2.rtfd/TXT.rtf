@@ -1,0 +1,297 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red252\green41\blue19;
+\red255\green255\blue255;\red252\green41\blue19;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c100000\c25745\c7993;
+\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c100000\c25745\c7993;\cssrgb\c100000\c100000\c99985\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15260\viewh10460\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+  Que se busca con la programaci\'f3n orientada a objetos?
+\f1 \
+\uc0\u9679 
+\f0  Incremento de:\
+
+\f1 \uc0\u9675 
+\f0  Productividad\
+
+\f1 \uc0\u9675 
+\f0  Calidad del software\
+
+\f1 \uc0\u9675 
+\f0  Comprensi\'f3n del software\
+
+\f1 \uc0\u9675 
+\f0  Tiempo \'fatil del software\
+\
+  Conjunto de objetos que interact\'faan mediante el env\'edo de mensajes para cumplir un conjunto de objetivos\
+
+\f1 \uc0\u9679 
+\f0  \'c9nfasis en las abstracciones de los datos\
+
+\f1 \uc0\u9679 
+\f0  Las funciones y los datos son encapsulados\
+en entidades fuertemente relacionadas\
+
+\f1 \uc0\u9679 
+\f0  Facilita el mantenimiento por\
+   especializaci\'f3n\
+
+\f1 \uc0\u9679 
+\f0  Correlaci\'f3n directa con las entidades del dominio\
+\
+  Brecha Sem\'e1ntica:\
+Reduce la brecha de representaci\'f3n entre el modelo de software y el dominio que se representa\
+\
+   \'bfQu\'e9 es un Objeto?\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679 
+\f0  Un Componente de software\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679 
+\f0  Una entidad almacenada en memoria\
+
+\f1 \uc0\u9679 
+\f0  Un objeto encapsula datos y comportamiento en una unidad\
+\
+En un sistema de control de tr\'e1fico a\'e9reo: aviones, pistas, torres de control, etc.\
+En un sistema de alumnos de una Facultad: Alumno, Curso, Docente, etc.\
+Entidades abstractas, una formula matem\'e1tica, el evento de un click.\
+\
+ Vista Din\'e1mica de los Objetos:\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679 
+\f0  Los objetos se crean y se destruyen en forma din\'e1mica\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679 
+\f0  Los objetos tienen su propia identidad y encapsulan estado y comportamiento\
+
+\f1 \uc0\u9679 
+\f0  Las variables de instancia mantienen referencias a otros objetos (Como por ej. un id incremental por cada objeto)\
+
+\f1 \uc0\u9679 
+\f0  El comportamiento de los objetos es definido por los m\'e9todos\
+\
+  Encapsulamiento:\
+\'93Revelan qu\'e9 pueden hacer y qu\'e9 informaci\'f3n pueden proporcionar, pero no revelan c\'f3mo lo hace o c\'f3mo lo conoce.\'94\
+El encapsulamiento se refiere al ocultamiento de informaci\'f3n o detalles\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9675 
+\f0  Los objetos encapsulan sus datos\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9675 
+\f0  Los datos en los objetos son privados\
+
+\f1 \uc0\u9675 
+\f0  Desde \'93el mundo exterior\'94 no se puede acceder o modificar sus datos\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9675 
+\f0  Los m\'e9todos son (t\'edpicamente) p\'fablicos \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9675 
+\f0  Desde \'93el mundo exterior\'94 se puede enviar mensajes que invoquen a los m\'e9todos\
+Un programa orientado a objetos consiste de objetos que interact\'faan con otros objetos mediante el env\'edo de mensajes de uno a otro.\
+\
+  Los Objetos tienen responsabilidades\
+Un Avi\'f3n es responsable por conocer su hora de aterrizaje\
+\
+Los objetos colaboran entre s\'ed para cumplir sus responsabilidades\
+
+\f1 \uc0\u9675 
+\f0  Un avi\'f3n puede colaborar con la Torre de Control para calcular el tiempo de aterrizaje.\
+La Colaboraci\'f3n se da a trav\'e9s del env\'edo de mensajes\
+  \
+Mensajes y M\'e9todos\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679  
+\f0 Todo el computo es realizado por los objetos\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679 
+\f0  La \'fanica forma de interactuar con un objeto es mediante el env\'edo de un mensaje a este\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679  
+\f0 Mensaje: Se\'f1al que se le env\'eda a un objeto (receptor) para invocar un m\'e9todo \cf4 \cb5 (persona.getName();)\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \uc0\u9679 
+\f0  M\'e9todo: Comportamiento de un objeto que se ejecuta cuando el objeto recibe un mensaje \
+\cf4 \cb5 (dentro de la clase persona, getName()\{return: this.name;\})\cf2 \cb3 \
+\
+Clase Vs. Instancia.\
+Generalmente se necesitan muchos objetos de un mismo tipo en un programa\
+
+\f1 \uc0\u9675 
+\f0  Alumnos, Aviones, Cuentas de Banco, Empleados\
+\
+  Clase\
+Molde para crear objetos con un determinado comportamiento y estado\
+\
+Un molde que define a las instancias. \
+Una f\'e1brica para crear objetos de un determinado tipo\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 Public Class Persona\{\}\cf2 \cb3 \
+\
+  Instancia (objeto)\
+Es instanciada (creada) por una clase\
+Ocupa espacio en memoria\
+Mantiene un estado\
+Posee comportamiento\
+Conoce a qu\'e9 clase pertenece\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 Persona pablo = new Persona(\'93Pablo\'94,\'94Copes\'94,37);\cf2 \cb3 \
+\
+  JAVA\
+El lenguaje Java es un lenguaje de programaci\'f3n orientado a objetos, que permite desarrollar aplicaciones para diferentes sistemas (es decir, aplicaciones multiplataforma)\
+\
+\'bfUtilizar el lenguaje Java garantiza que tengamos una soluci\'f3n correctamente orientada a objetos (con todas sus bondades)?\
+No, el lenguaje Java brinda al desarrollador cierta flexibilidad que puede ser usada de forma libre y, a veces, poco orientado a objetos\
+\'bfUna soluci\'f3n orientada a objetos garantiza el \'e9xito de la aplicaci\'f3n?\
+No, si \'e9sta no cumple con los requisitos del cliente (por ejemplo, no es lo que el cliente ped\'eda, es demasiado lenta, etc.)\
+\
+Java es el nombre de un lenguaje de programaci\'f3n orientado a objetos\
+
+\f1 \uc0\u9679 
+\f0  Tambi\'e9n es el nombre de una plataforma de desarrollo de aplicaciones (conjunto de herramientas que permiten construir y correr aplicaciones)\
+
+\f1 \uc0\u9679 
+\f0  Tanto lenguaje como plataforma est\'e1n pensados para desarrollar aplicaciones multiplataforma, es decir, que se puedan ejecutar en Linux, Windows, Android, u otro sistema\
+\
+  Plataforma JAVA\
+Es un conjunto de herramientas de software (programas y bibliotecas) que permiten desarrollar aplicaciones multiplataforma\
+A menudo, las aplicaciones para la plataforma Java son programadas usando el lenguaje de programaci\'f3n Java (aunque no es la \'fanica forma)\
+\
+  Bytecode\
+El lenguaje intermedio de la plataforma Java\
+En la plataforma existe un programa, llamado M\'e1quina Virtual o Virtual Machine (VM), que traduce Bytecode al c\'f3digo de la m\'e1quina actual. Bytecode es un lenguaje similar al c\'f3digo de m\'e1quina, pero no depende del tipo de CPU.\
+\
+La desventaja de este esquema es que la plataforma Java (en especial la VM) tiene que funcionar en el sistema actual.\
+Por ej. Windows 32/64 bits, Linux, MacOS, etc. Afortunadamente, existen versiones para los sistemas m\'e1s populares.\
+\
+  Plataforma Java Edici\'f3n Est\'e1ndar\
+Incluye todo lo necesario para ejecutar programas escritos en Java en una PC o un servidor\
+JRE (Java Runtime Environment): solo para ejecutar aplicaciones Java (lo deber\'eda tener instalado el usuario final de nuestra aplicaci\'f3n)\
+JDK (Java Development Kit): contiene el JRE y, adem\'e1s, software que usan los desarrolladores para monitorear y encontrar errores en los programas Java (lo deber\'edamos tener instalado nosotros)\
+\
+  M\'e1quina Virtual\
+
+\f1 \uc0\u9679 
+\f0  Es la parte central del JRE: Ejecuta la aplicaciones\
+
+\f1 \uc0\u9679 
+\f0  Es un programa, se ejecuta indic\'e1ndole una aplicaci\'f3n Java, previamente compilada a bytecode\
+
+\f1 \uc0\u9679 
+\f0  Por ejemplo (en Windows):\
+
+\f1 \uc0\u9675 
+\f0  Primero compilamos (traducimos) nuestra app a bytecode\
+
+\f1 \uc0\u9632 
+\f0  C:\\> javac.exe MiProgramaEnJava.java\
+
+\f1 \uc0\u9675 
+\f0  Se crea un archivo MiProgramaJava.class, se indica a la maquina virtual usando el primer argumento\
+
+\f1 \uc0\u9632 
+\f0  C:\\> java.exe MiProgramaEnJava\
+\
+  Manejo de RAM\
+
+\f1 \uc0\u9679 
+\f0  En Java, a diferencia de otros lenguajes, el manejo de memoria RAM se supone autom\'e1tico\
+
+\f1 \uc0\u9679 
+\f0  La m\'e1quina virtual se encarga de buscar estructuras que no se usan m\'e1s (por ejemplo, arreglos)\
+
+\f1 \uc0\u9679 
+\f0  La parte de la m\'e1quina virtual que hace esta \'93limpieza\'94 se denomina Recolector de Basura, o Garbage Collector (GC)\
+\
+  Atributos (ej. clase Avi\'f3n)\
+
+\f1 \uc0\u9679 
+\f0  Primero tenemos que establecer qu\'e9 cosas va a tener nuestro avi\'f3n: Capacidad. Un nombre.\
+
+\f1 \uc0\u9675 
+\f0  Podr\'eda tener m\'e1s cosas: color, modelo, motor, distancia recorrida, etc. Son cosas que tienen que ver con el Avi\'f3n\
+
+\f1 \uc0\u9679 
+\f0  No tiene sentido poner un atributos que pertenecen otras entidades \'93precio\'94 o \'93n\'famero de ticket de recital\'94\
+Esto se suele denominar alta cohesi\'f3n (los atributos del avi\'f3n tienen relaci\'f3n con la entidad avi\'f3n)\
+\
+  Constructor de un Objeto\
+El constructor puede verse como el m\'e9todo invocado para la construcci\'f3n de un objeto. Cuando hacemos:\
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb7 Persona pablo = new Persona(\'93Pablo\'94,\'94Copes\'94,37);\
+Persona p1 = new Persona();\cf2 \cb3 \
+Invocamos al constructor con 3 argumentos de la clase Persona.\
+El constructor es quien se encarga de crear el objetos y setear los valores iniciales del mismo\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb5 Public Persona (String name, String lastName, int age)\{this.name = name; this.lastName = lastName; this.age = age\}\
+Public Persona ()\{this.name = \'93Name\'94; \cf6 \cb7 this.lastName = \'93Last Name\'94; this.age = \'93Age\'94\cf4 \cb5 \}(valores por defecto)\cf2 \cb3 \
+El constructor puede poseer par\'e1metros. UN objeto puede tener m\'faltiples constructores\
+Un objeto puede tener m\'faltiples constructores todos ellos deben tener una signatura diferente. Cuando se llama a un constructor es cuando se decide cu\'e1l se invoca.\
+pablo.getName(); // Pablo\
+p1.getName(); // Name\
+\
+\
+\
+La POO busca varios objetivos en el mundo de la programaci\'f3n:\
+\
+- **Incremento de Productividad:** Al organizar el c\'f3digo en objetos reutilizables, se ahorra tiempo y esfuerzo al programar nuevas funcionalidades.\
+\
+- **Calidad del Software:** La estructura en objetos facilita la detecci\'f3n y correcci\'f3n de errores, resultando en un software m\'e1s confiable.\
+\
+- **Comprensi\'f3n del Software:** Los objetos se relacionan con conceptos del mundo real, lo que hace que el software sea m\'e1s comprensible tanto para los programadores como para los usuarios.\
+\
+- **Tiempo \'datil del Software:** La reutilizaci\'f3n de c\'f3digo y la capacidad de extender funcionalidades facilitan que el software siga siendo \'fatil a lo largo del tiempo.\
+\
+**Conjunto de Objetos que Interact\'faan:** En la POO, los programas est\'e1n formados por objetos que se comunican mediante el env\'edo de mensajes. Cada objeto tiene un prop\'f3sito y encapsula tanto sus datos como su comportamiento. Estos objetos colaboran para cumplir una serie de objetivos.\
+\
+**\'c9nfasis en Abstracciones de Datos:** Se enfoca en crear representaciones simplificadas de los datos del mundo real en forma de objetos, lo que facilita su manejo y comprensi\'f3n.\
+\
+**Encapsulaci\'f3n:** Esta es una t\'e9cnica donde los objetos ocultan sus detalles internos mientras exponen solo lo que es necesario para interactuar con ellos. Los datos se mantienen privados y solo se accede a trav\'e9s de m\'e9todos p\'fablicos, lo que ayuda a mantener el sistema seguro y modular.\
+\
+**Brecha Sem\'e1ntica:** La POO busca reducir la brecha entre c\'f3mo se representa el software y c\'f3mo se entiende el dominio que representa.\
+\
+**Objeto:** Un objeto es una entidad en el software que almacena datos y comportamiento en un solo paquete. Puede ser algo concreto, como un avi\'f3n, o abstracto, como una f\'f3rmula matem\'e1tica.\
+\
+**Vista Din\'e1mica de los Objetos:** Los objetos se crean y destruyen en tiempo real. Cada objeto tiene su identidad \'fanica y almacena tanto su estado como su comportamiento. Los objetos pueden comunicarse entre s\'ed mediante el env\'edo de mensajes.\
+\
+**Colaboraci\'f3n de Objetos:** Los objetos trabajan juntos para lograr sus responsabilidades. Pueden colaborar envi\'e1ndose mensajes y compartiendo informaci\'f3n.\
+\
+**Mensajes y M\'e9todos:** Los objetos se comunican envi\'e1ndose mensajes, que son solicitudes para realizar ciertas acciones. Los objetos tienen m\'e9todos que definen c\'f3mo responden a estos mensajes.\
+\
+**Clase vs. Instancia:** Las clases son como moldes que definen la estructura y el comportamiento de los objetos. Las instancias son objetos individuales creados a partir de esas clases.\
+\
+**Java:** Java es un lenguaje de programaci\'f3n orientado a objetos que permite desarrollar aplicaciones que funcionan en diferentes sistemas (multiplataforma).\
+\
+**Plataforma Java:** Un conjunto de herramientas que incluye programas y bibliotecas para desarrollar aplicaciones multiplataforma.\
+\
+**Bytecode:** Un lenguaje intermedio utilizado por la plataforma Java. Se traduce en c\'f3digo de m\'e1quina por la M\'e1quina Virtual de Java para su ejecuci\'f3n.\
+\
+**Plataforma Java Edici\'f3n Est\'e1ndar:** Incluye todo lo necesario para ejecutar y desarrollar aplicaciones Java en una PC o servidor. El JRE permite la ejecuci\'f3n, mientras que el JDK tambi\'e9n proporciona herramientas de desarrollo.\
+\
+**M\'e1quina Virtual:** Un programa que ejecuta aplicaciones Java compiladas en Bytecode.\
+\
+**Manejo de RAM y Garbage Collector:** La M\'e1quina Virtual de Java gestiona autom\'e1ticamente la memoria, liberando estructuras no utilizadas a trav\'e9s del Garbage Collector.\
+\
+**Atributos:** Son caracter\'edsticas de los objetos que reflejan su estado. Se busca alta cohesi\'f3n, es decir, que los atributos sean relevantes para la entidad a la que pertenecen.\
+\
+**Constructor de un Objeto:** Un constructor es un m\'e9todo especial que se invoca al crear un objeto. Define c\'f3mo se inicializan los valores del objeto cuando se crea.\
+\
+Espero que esta explicaci\'f3n m\'e1s detallada te haya ayudado a entender mejor estos conceptos de Programaci\'f3n Orientada a Objetos y Java. Si tienes alguna pregunta adicional o necesitas m\'e1s clarificaci\'f3n sobre alg\'fan punto en particular, no dudes en preguntar.\
+\
+}
